@@ -22,7 +22,7 @@ class MainMenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(/* view = */ binding.root)
         showFragment(HomeFragment())
         binding.itemMenu.setOnItemSelectedListener { menuItem ->
             handleOnNavigationItemSelected(menuItem)
