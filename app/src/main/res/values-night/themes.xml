@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Base.Theme.ViewModelV3" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Light theme colors -->
+        <item name="colorPrimary">@color/gray</item> <!-- Primary color for light mode -->
+        <item name="colorSecondary">@color/night</item>
+
+    </style>
+
+    <style name="Theme.ViewModelV3" parent="Base.Theme.ViewModelV3" />
+</resources>
