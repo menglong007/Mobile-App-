@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ViewModelV3</string>
+    <string name="home">Home</string>
+    <string name="save">Save</string>
+    <string name="profile">Me</string>
+    <string name="date">By Date</string>
+    <string name="name">By Name</string>
+    <string name="underlined_text"><u>U</u></string>
+</resources>
