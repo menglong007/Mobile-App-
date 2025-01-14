@@ -17,8 +17,6 @@ import kh.edu.rupp.ite.viewmodelv3.fragment.SaveFragment
 
 class MainMenuActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val detailViewModel: DetailViewModel by viewModels()
-    private val homeViewModel: HomeViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +28,6 @@ class MainMenuActivity : AppCompatActivity() {
             handleOnNavigationItemSelected(menuItem)
         }
 
-        val title = intent.getStringExtra("TITLE").toString()
-        val content = intent.getStringExtra("CONTENT").toString()
-        if (title.isNotBlank() && content.isNotBlank()){
-            detailViewModel.onInsertForum(title,content)
-            homeViewModel.loadData("","",false)
-        }
     }
 
 

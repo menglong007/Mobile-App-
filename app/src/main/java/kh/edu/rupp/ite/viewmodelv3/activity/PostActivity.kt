@@ -29,6 +29,7 @@ import kotlinx.coroutines.delay
 class PostActivity : AppCompatActivity() {
 
     private lateinit var binding: ViewDetailBeforePostActivityBinding
+    private val detailViewModel : DetailViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,11 +65,15 @@ class PostActivity : AppCompatActivity() {
     private fun onSubmit() {
         val title = intent.getStringExtra("TITLE").toString().trim()
         val content = intent.getStringExtra("CONTENT").toString().trim()
-        val intent = Intent(this, MainMenuActivity::class.java)
-        intent.putExtra("TITLE", title)
-        intent.putExtra("CONTENT", content)
-        startActivity(intent)
-        finish()
+        detailViewModel.onInsertForum(title,content)
+
+        val delayMillis = 1500L // Delay for navigation
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, MainMenuActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, delayMillis)
+
     }
 
 }
