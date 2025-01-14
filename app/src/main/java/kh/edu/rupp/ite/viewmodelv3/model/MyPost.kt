@@ -6,5 +6,6 @@ data class PostModel(
     val totalAnswer : Number,
     val created: String,
     val id : Number,
-    val username : String
+    val username : String,
+    val userId : Number
 )

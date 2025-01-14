@@ -67,8 +67,10 @@ class PostAdapter(private val items: List<PostModel>,
                 val intent = Intent(holder.itemView.context, DetailActivity::class.java)
                 val forumId = item.id.toString()
                 val username = item.username
+                val userId = item.userId.toString()
                 intent.putExtra("ID", forumId)
                 intent.putExtra("USERNAME", username)
+                intent.putExtra("USERID", userId)
                 holder.itemView.context.startActivity(intent)
             }
 

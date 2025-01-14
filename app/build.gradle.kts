@@ -26,6 +26,23 @@ android {
             )
         }
     }
+
+//    flavorDimensions += "Forum"
+//    productFlavors {
+//        create("dev") {
+//            dimension = "Forum"
+//            applicationId = "kh.edu.rupp.ite.viewmodelv3.dev"
+//            resValue("string", "app_name", "Dev")
+//            buildConfigField("String", "API_BASE_URL", "\"https://forum-backend-889842618137.asia-southeast1.run.app/\"")
+//        }
+//        create("prd") {
+//            dimension = "Forum"
+//            applicationId = "kh.edu.rupp.ite.viewmodelv3.prd"
+//            resValue("string", "app_name", "Movie prd")
+//            buildConfigField("String", "API_BASE_URL", "\"https://forum-backend-889842618137.asia-southeast1.run.app/\"")
+//        }
+//    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
